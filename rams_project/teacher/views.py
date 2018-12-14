@@ -5,4 +5,5 @@ def index(request):
     return render(request, 'teacher/home.html')
 
 def contact(request):
-    return render(request, 'teacher/basic.html',{'content':['If']})
+    return render(request, 'teacher/basic.html',{'content':['If you '
+     'would like to contact me, please email me.','hskinsley@gmail.com']})
