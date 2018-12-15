@@ -1,7 +1,12 @@
 import os
 
 def main():
-    login()
+    try:
+        login()
+    except FileNotFoundError:
+        print("Sorry this account does not exist please create new account")
+        signUp()
+
 
 def login():
     username = input("Enter Username: ")
@@ -17,9 +22,7 @@ def login():
 def signUp():
     username = input("Enter Username: ")
     password = input("Enter Password: ")
-
     createAccount = open(username + ".txt", "w+")
     createAccount.write(password)
 
-
-
+main()
