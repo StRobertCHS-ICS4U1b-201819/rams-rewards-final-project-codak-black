@@ -1,0 +1,7 @@
+{% extends "personal/header.html" %}
+
+{% block content %}
+	{% for points in object_list %}
+	  <h5>{{ points.date|date:"Y-m-d" }}<a href="/activity/{{points.id}}"> {{points.name}}</a></h5>
+	{% endfor %}
+{% endblock %}
