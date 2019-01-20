@@ -5,8 +5,9 @@
 	<title>St. Robert's User Stories</title>
 	<meta charset="utf-8" />
 	{% load staticfiles %}
-	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
@@ -29,13 +30,17 @@
 			  <div class="col-sm-30">
 				  <br>
 				  <center>
-					  <br>
-				  <div class>
-					<h1>Rams Rewards Web Console</h1>
-					  <br>
+					<div class="jumbotron">
+    <h1>Rams Rewards Web Console </h1>
+						<img src="{% static 'personal/img/ib-world-school-logo.jpg' %}" class="responsive-img" style='max-height:100px;' alt="ib-world-school-logo.jpg">					
+						<img src="{% static 'personal/img/ecoschool_seal_platinum.png' %}" class="responsive-img" style='max-height:100px;' alt=" ecoschool_seal_platinum.png ">					  
+						<img src="{% static 'personal/img/str.png' %}" class="responsive-img" style='max-height:100px;' alt=" str logo ">					  
+					<br>
+				<br> 
 					<p> <a class="btn btn-primary btn-lg"
-					 href="#" role="button">Learn more</a></p>
-
+					  role= "button" href="/#/" >Learn more </a> </p>
+					<p> <a class="btn btn-primary btn-lg"
+						role= "button" href="/admin/" > Log In </a>  </p>
 					</div>
 				  </center>
 			  </div>
@@ -47,7 +52,7 @@
 		  <br>
 		   <!-- Great, til you resize. -->
 			<!--<div class="well bs-sidebar affix" id="sidebar" style="background-color:#fff">-->
-			<div class="well bs-sidebar" id="sidebar" style="background-color:#fff; padding:30px">
+			<div class="well bs-sidebar" id="sidebar" style="background-color:#fff; padding:20px">
 			  <ul class="nav nav-pills nav-stacked">
 				<li><a href='/'>Home</a></li>
 				<li><a href='/blog/'>Blog</a></li>
