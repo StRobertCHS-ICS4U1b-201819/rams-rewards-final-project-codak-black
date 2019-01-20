@@ -1,9 +1,11 @@
 {% extends "personal/header.html" %}
 
-{% block content %}
-<h2> latest posts <h2>
-
-	{% for post in object_list %}
-	  <h4>{{ post.date|date:"Y-m-d" }}<a href="/blog/{{post.id}}"> {{post.title}}</a></h4>
-	{% endfor %}
+{% block head_title %}history | {{block.super}}{% endblock head_title %}
+{%block content %}
+<h2> latest points </h2>
+<ul>
+{% for obj in object_list %}
+		<li>{{ obj }}</li>
+{% endfor %}
+</ul>
 {% endblock %}
