@@ -5,7 +5,7 @@
 <h2> latest points </h2>
 <ul>
 {% for obj in object_list %}
-		<li>{{ obj }}</li>
+		<li>{{ obj.name }} {{obj.points}}</li>
 {% endfor %}
 </ul>
 {% endblock %}
