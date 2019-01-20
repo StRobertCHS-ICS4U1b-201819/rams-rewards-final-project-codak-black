@@ -1,0 +1,11 @@
+{% extends "personal/header.html" %}
+
+{% block head_title %}history | {{block.super}}{% endblock head_title %}
+{%block content %}
+<h2> latest points </h2>
+<ul>
+{% for obj in object_list %}
+		<li>{{ obj.name }} {{obj.points}}</li>
+{% endfor %}
+</ul>
+{% endblock %}
