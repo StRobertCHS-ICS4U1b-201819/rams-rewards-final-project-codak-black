@@ -9,6 +9,8 @@ StudentDB:
     orientation: "vertical"
     first_name_text_input: first_name
     last_name_text_input: last_name
+    student_number_text_input: student_number
+    grade_text_input: grade
     student_list: students_list_view
     padding: 10
     spacing: 10
@@ -25,6 +27,14 @@ StudentDB:
             text: "Last Name"
         TextInput:
             id: last_name
+        Label:
+            text: "Student #"
+        TextInput:
+            id: student_number
+        Label:
+            text: "Grade"
+        TextInput:
+            id: grade
 
     BoxLayout:
         size_hint_y: None
@@ -48,5 +58,9 @@ StudentDB:
     ListView:
         id: students_list_view
         adapter:
-            ListAdapter(data=["Doug Smith"], cls=main.StudentListButton)
+            ListAdapter(data = '', cls=main.StudentListButton)
+
+#        id: students_list_view
+#        adapter:
+#            ListAdapter(data=["Doug Smith"], cls=main.StudentListButton)
 

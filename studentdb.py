@@ -14,12 +14,15 @@ class StudentDB(BoxLayout):
     # fields
     first_name_text_input = ObjectProperty()
     last_name_text_input = ObjectProperty()
+    student_number = ObjectProperty()
+    grade = ObjectProperty()
     student_list = ObjectProperty()
 
     def submit_student(self):
 
         # Get the student name from the TextInputs
-        student_name = self.first_name_text_input.text + " " + self.last_name_text_input.text
+        student_name = "Name: " + self.first_name_text_input.text + " " + self.last_name_text_input.text + \
+                       "     Student Number: " + self.student_number_text_input.text + "     Grade: " + self.grade_text_input.text
 
         # Add the student to the ListView
         self.student_list.adapter.data.extend([student_name])
@@ -48,12 +51,14 @@ class StudentDB(BoxLayout):
 
             # Get the text from the item selected
             selection = self.student_list.adapter.selection[0].text
+            selection = self.student_list.adapter.selection[0].text
 
             # Remove the matching item
             self.student_list.adapter.data.remove(selection)
 
             # Get the student name from the TextInputs
-            student_name = self.first_name_text_input.text + " " + self.last_name_text_input.text
+            student_name = "Name: " + self.first_name_text_input.text + " " + self.last_name_text_input.text + \
+                           "     Student Number: " + self.student_number_text_input.text + "     Grade: " + self.grade_text_input.text
 
             # Add the updated data to the list
             self.student_list.adapter.data.extend([student_name])
