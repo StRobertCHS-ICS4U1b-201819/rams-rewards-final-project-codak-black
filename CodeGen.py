@@ -30,8 +30,12 @@ class EventList(object):
                 return event.get_points()
 
 
+
 eventList = EventList()
+
 eventList.add_new_event("cs club", 100)
+
+#which_event = input("enter event: ")
 
 qr = qrcode.QRCode(
     version = 1,
@@ -40,15 +44,11 @@ qr = qrcode.QRCode(
     border = 4,
 )
 
-data = eventList.get_event("cs club")
+data = eventList.get_event("cs club") #eventList.get_evet(which_event)
 
 qr.add_data(data)
 qr.make(fit=True)
 
 
-# Create an image from the QR Code instance
-#img = qr.make_image()
-#img.save("image.png")
-
 img = qr.make_image(fill_color="black", back_color="white")
-img.save("event.png")
+img.save("CSQRCODE.png")

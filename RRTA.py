@@ -1,6 +1,5 @@
-import os
 
-def main():
+def check_Account():
     try:
         login()
     except FileNotFoundError:
@@ -25,4 +24,4 @@ def signUp():
     createAccount = open(username + ".txt", "w+")
     createAccount.write(password)
 
-main()
+check_Account()
