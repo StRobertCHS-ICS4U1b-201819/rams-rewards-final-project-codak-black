@@ -11,6 +11,7 @@ StudentDB:
     last_name_text_input: last_name
     student_number_text_input: student_number
     grade_text_input: grade
+    reward_points_text_input: reward_points
     student_list: students_list_view
     padding: 10
     spacing: 10
@@ -35,6 +36,10 @@ StudentDB:
             text: "Grade"
         TextInput:
             id: grade
+        Label:
+            text: "Points"
+        TextInput:
+            id: reward_points
 
     BoxLayout:
         size_hint_y: None
@@ -51,6 +56,10 @@ StudentDB:
             text: "Replace"
             size_hint_x: 15
             on_press: root.replace_student()
+        Button:
+            text: "Update"
+            size_hint_x: 15
+            on_press: root.update_student()
 
     # Define starting data and point to the ListItemButton
     # in the Python code
