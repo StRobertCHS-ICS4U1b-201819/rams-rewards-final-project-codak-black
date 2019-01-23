@@ -8,7 +8,7 @@ class StudentListButton(ListItemButton):
     pass
 
 
-class StudentDB(BoxLayout):
+class TeacherApp(BoxLayout):
 
     # Connects the value in the TextInput widget to these
     # fields
@@ -88,12 +88,12 @@ class StudentDB(BoxLayout):
             # Reset the ListView
             self.student_list._trigger_reset_populate()
 
-class StudentDBApp(App):
+class TeacherAppApp(App):
     def build(self):
-        return StudentDB()
+        return TeacherApp()
 
 
-dbApp = StudentDBApp()
+dbApp = TeacherAppApp()
 
 dbApp.run()
 
